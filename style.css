@@ -1,6 +1,9 @@
 /* ------------
 common style
 ------------- */
+*{
+    margin: 0;
+}
 img{
     width: 100%;
     height: 100%;
@@ -23,6 +26,10 @@ main{
     padding: 15px 26px;
     border: none;
     border-radius: 6px;
+}
+.architect-btn{
+    padding: 56px;
+    background-color: #FF900E;
 }
 
 /* -----------------
@@ -64,7 +71,7 @@ header style end
 ------------------ */
 
 /* -----------------------
-header images-section style stat
+ images-section style stat
 -------------------------- */
 
 .images-section {
@@ -85,31 +92,40 @@ header images-section style stat
 }
 
 /* -----------------------
-header images-section style end
+ images-section style end
 -------------------------- */
 
 /* -----------------------
-header architect-section style stat
+ architect-section style stat
 -------------------------- */
+.architect{
+    position: relative;
+}
 .architect-section{
     display: flex;
     justify-content: space-between;
+    
 
 }
+.architect-title{
+    border-left: 2px solid red;
+    padding: 21px;
+}
 .architect-blog{
-    width: 40%;
+    flex:0.6;
 }
 .architect-img{
+    flex: 1;
     position: relative;
 }
 .architect-img img{
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
     position: absolute;
     top: 0;
     right: 0;
+    
 }
-
 
 .card{
     box-shadow: 1px 1px 8px  rgba(191, 188, 188, 0.75);
@@ -117,3 +133,77 @@ header architect-section style stat
     margin: 5px;
     border-radius:8px;
 }
+.architect-btn{
+    border-radius: 7px;
+    text-align: center;
+    width: 150px;
+    height: 90px;
+    position: absolute;
+    bottom: 52px;
+    left: 38%;
+    
+}
+
+/* -----------------------
+ architect-section style end
+-------------------------- */
+
+/* -----------------------
+ some facts style stat
+-------------------------- */
+
+.icons{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.icon{
+    border: 1px solid #fab463;
+    border-radius: 5px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.icon > img{
+    width: 44px;
+    height: 44px;
+}
+
+/* -----------------------
+ icons style end
+-------------------------- */
+
+
+/* -----------------------
+sponser style start
+-------------------------- */
+
+.sponser-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponser-article > div{
+    width: 50%;
+    text-align: center;
+}
+.sponsers-brands{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 33px;
+    flex-wrap: wrap;
+}
+.sponsers-brands > img{
+    width: 120px;
+    height: 40px;
+}
+
