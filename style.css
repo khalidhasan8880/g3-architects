@@ -1,22 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Poppins:wght@500&family=Work+Sans:wght@400;500&display=swap');
+
 /* ------------
 common style
 ------------- */
-*{
+* {
     margin: 0;
+    box-sizing: border-box;
 }
-img{
-    width: 100%;
-    height: 100%;
-}
-section{
-    margin-top: 60px;
-    width: 80%;
-}
-main{
+
+body {
+    font-family: 'Work Sans';
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.small-margin {
+    margin: 11px 0;
+}
+
+.medium-margin {
+    margin: 17px 0;
+}
+
+.big-margin {
+    margin: 25px 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    margin-top: 60px;
+    width: 80%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .primary-btn {
     background-color: #FF900E;
     cursor: pointer;
@@ -27,7 +53,8 @@ main{
     border: none;
     border-radius: 6px;
 }
-.architect-btn{
+
+.architect-btn {
     padding: 56px;
     background-color: #FF900E;
 }
@@ -42,7 +69,7 @@ header {
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -61,7 +88,7 @@ nav>ul {
 }
 
 .banner-article {
-    width: 80%;
+    width: 66%;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -76,6 +103,7 @@ header style end
 
 .images-section {
     display: flex;
+    justify-content: space-between;
     gap: 70px;
     width: 80%;
 }
@@ -86,7 +114,7 @@ header style end
     grid-gap: 12px;
 }
 
-.images-articles{
+.images-articles {
     display: flex;
     align-items: center;
 }
@@ -98,50 +126,38 @@ header style end
 /* -----------------------
  architect-section style stat
 -------------------------- */
-.architect{
+.architect {
     position: relative;
 }
-.architect-section{
+
+
+.architect-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.card {
+    box-shadow: 1px 1px 8px rgba(191, 188, 188, 0.75);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* .cards{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    
+    height: 100%;
 
-}
-.architect-title{
-    border-left: 2px solid red;
-    padding: 21px;
-}
-.architect-blog{
-    flex:0.6;
-}
-.architect-img{
-    flex: 1;
-    position: relative;
-}
-.architect-img img{
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    
-}
-
-.card{
-    box-shadow: 1px 1px 8px  rgba(191, 188, 188, 0.75);
-    padding: 5px;
-    margin: 5px;
-    border-radius:8px;
-}
-.architect-btn{
+} */
+.architect-btn {
     border-radius: 7px;
     text-align: center;
-    width: 150px;
-    height: 90px;
+    padding: 40px 55px;
     position: absolute;
-    bottom: 52px;
-    left: 38%;
-    
+    bottom: 90px;
+    left: 49%;
+
 }
 
 /* -----------------------
@@ -151,15 +167,19 @@ header style end
 /* -----------------------
  some facts style stat
 -------------------------- */
+.some-facts-article {
+    width: 40%;
+}
 
-.icons{
+.icons {
     margin-top: 70px;
     display: flex;
     justify-content: space-around;
     gap: 6px;
     flex-wrap: wrap;
 }
-.icon{
+
+.icon {
     border: 1px solid #fab463;
     border-radius: 5px;
     width: 180px;
@@ -171,7 +191,13 @@ header style end
     padding: 20px;
 
 }
-.icon > img{
+
+.icon:hover {
+    border: 2px solid #f47a00;
+    background-color: #fff3e5;
+}
+
+.icon>img {
     width: 44px;
     height: 44px;
 }
@@ -185,25 +211,130 @@ header style end
 sponser style start
 -------------------------- */
 
-.sponser-article{
+.sponser-article {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sponser-article > div{
+.sponser-article>div {
     width: 50%;
     text-align: center;
 }
-.sponsers-brands{
+
+.sponsers-brands {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 33px;
     flex-wrap: wrap;
 }
-.sponsers-brands > img{
+
+.sponsers-brands>img {
     width: 120px;
     height: 40px;
 }
 
+
+
+footer {
+    background-color: #FFF4E7;
+    text-align: center;
+    padding: 22px 0;
+    margin: 100px 0;
+    padding: 42px 20%;
+}
+
+
+/*extra section ----- our projects */
+
+.projects-img {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+}
+.projects-img img{
+    cursor:pointer;
+}
+/* --------------------
+responsive styles start
+----------------------- */
+
+@media only screen and (max-width:576px) {
+
+    /* header section */
+
+    header {
+        background-color: antiquewhite;
+        padding: 5px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 21px;
+        margin-right: 10px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    /* images section */
+
+    .images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .images-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* architect section */
+
+    .architect-section {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+
+    .architect-blog {
+        order: 2;
+    }
+
+    .architect-img {
+        order: 1;
+    }
+
+    .architect-btn {
+        border-radius: 7px;
+        position: relative;
+        padding: 30px 45px;
+        left: 28%;
+        bottom: 0px;
+
+
+    }
+
+    /* some facts */
+    .some-facts-article {
+        width: 100%;
+    }
+
+    /* sponser section */
+
+    .sponser-article>div {
+        width: 100%;
+    }
+
+    .sponsers-brands {
+        justify-content: space-evenly;
+
+    }
+
+    .projects-img {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
